@@ -1,0 +1,58 @@
+public class Person {
+    private String name;
+    private int id;
+    public void setName(String name) {
+        this.name = name;
+    }
+   public String getName() {
+        return name;
+    }
+ public void setID(int id) {
+        this.id = id;
+    }
+public int getID() {
+        return id;
+    }
+}
+
+public class Student extends Person {
+    private String course;
+ public void setCourse(String course) {
+        this.course = course;
+    }public String getCourse() {
+        return course;
+    }
+}
+
+public class Lecturer extends Person {
+    private String programme;
+public void setProg(String programme) {
+        this.programme = programme;
+    }
+ public String getProg() {
+        return programme;
+    }
+}
+
+public class TestPerson {
+    public static void main(String[] args) {
+        Student student = new Student();
+        student.setName("John Doe");
+        student.setID(1001);
+        student.setCourse("Computer Science");
+
+        Lecturer lecturer = new Lecturer();
+        lecturer.setName("Jane Smith");
+        lecturer.setID(2001);
+        lecturer.setProg("Software Engineering");
+
+        System.out.println("Student Details:");
+        System.out.println("Name: " + student.getName());
+        System.out.println("ID: " + student.getID());
+        System.out.println("Course: " + student.getCourse());
+        System.out.println("\nLecturer Details:");
+        System.out.println("Name: " + lecturer.getName());
+        System.out.println("ID: " + lecturer.getID());
+        System.out.println("Programme: " + lecturer.getProg());
+    }
+}
