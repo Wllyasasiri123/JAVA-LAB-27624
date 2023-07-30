@@ -1,0 +1,6 @@
+) public class MyInformation {
+    public static void main(String[] args) {
+        System.out.println("Name: ChatGPT");
+        System.out.println("Degree Program: AI and Language Technology");
+    }
+}
