@@ -1,0 +1,62 @@
+package com.mycompany.excercise3;
+
+
+public class Employee 
+{
+    private String EmpName;
+    private float BSalary;
+    private float Bonus;
+    private float BonusAmount;
+    
+    public void setEname(String ename)
+    {
+        this.EmpName=ename;        
+    }
+    public String getName()
+    {
+        return(EmpName);
+    }
+    public void setBSalary(float bsalary)
+    {
+        this.BSalary=bsalary;        
+    }
+    public float getBSalary()
+    {
+       return(BSalary);
+    }
+    public Employee(float  bonus)
+    {
+        this.Bonus=bonus;
+    }
+    public void FindBonusAmount()
+    {
+       BonusAmount=BSalary+Bonus; 
+        System.out.println("Bonus Amount:"+BonusAmount);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+package com.mycompany.excercise3;
+
+public class Excercise3
+{
+
+    public static void main(String[] args)
+    {
+        Employee E1=new Employee(10000.00f);
+        E1.setEname("Bogdan");
+        System.out.println("Employee name:"+E1.getName());
+        E1.setBSalary(50000);
+        System.out.println("Basic Salary:"+E1.getBSalary());
+        E1.FindBonusAmount();
+        
+    }
+}
